@@ -15,6 +15,15 @@
             font-size: 2em;
             font-weight: bold;
         }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .classement-img {
+            width: 800px;
+            height: 600px;
+        }
 
         /* Optional: If you want to apply specific styles to the h3 */
         h3 {
@@ -25,13 +34,16 @@
 </head>
 <body>
     <h1>Classement</h1>
-    <img src="classement.png" alt="Classement">
-    <h2>Classement Data</h2>
-    <div id="classement-table"></div>
+        <div class="container"></div>
+        <img src="classement.png" alt="Classement">
+        <h2>Classement Data</h2>
+        <div id="classement-table"></div>
+    
     <script>
         fetch('classement_table.html')
         .then(response => response.text())
         .then(data => document.getElementById('classement-table').innerHTML = data);
     </script>
+    </div>
 </body>
 </html>
