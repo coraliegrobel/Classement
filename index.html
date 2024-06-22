@@ -33,9 +33,12 @@
     </style>
 </head>
 <body>
+    <h1>Live Score</h1>
+        <div id="live-score"></div>
     <h1>Classement</h1>
         <div class="container"></div>
-        <img src="classement.png" alt="Classement">
+            <img src="classement.png" alt="Classement">
+        
         <h2>Classement Data</h2>
         <div id="classement-table"></div>
     
@@ -43,6 +46,9 @@
             fetch('classement_table.html')
             .then(response => response.text())
             .then(data => document.getElementById('classement-table').innerHTML = data);
+            fetch('live_score.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('live-score').innerHTML = data);
         </script>
     </div>
 </body>
